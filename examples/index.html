@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Bardic</title>
+    <script src="../src/Bardic.js"></script>
+</head>
+<body>
+    <script> 
+        Bardic.ajax({
+            url: "https://api.myjson.com/bins/146swf",
+            onSuccess: function(data) {
+                console.log("returned data from ajax", data);
+            },
+			includeDebugData: true
+        });
+		
+		Bardic.getJSON("https://api.myjson.com/bins/146swf", function(data) {
+			console.log("returned data from getJSON", data);
+		}, true);
+    </script>
+</body>
+</html>
